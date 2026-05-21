@@ -9,7 +9,7 @@ import os
 
 load_dotenv()
 
-from agent import chat_with_agent
+from .agent import chat_with_agent
 
 app = FastAPI(
     title="MediCopago - Estimador de Copago",
