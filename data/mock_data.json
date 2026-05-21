@@ -1,0 +1,179 @@
+{
+  "pacientes": [
+    {
+      "id": "P001",
+      "nombre": "Carlos Mendoza",
+      "cedula": "1712345678",
+      "poliza_id": "POL-GOLD-001",
+      "plan": "Gold",
+      "vigente": true,
+      "fecha_inicio": "2024-01-01",
+      "fecha_fin": "2025-12-31"
+    },
+    {
+      "id": "P002",
+      "nombre": "María Herrera",
+      "cedula": "1798765432",
+      "poliza_id": "POL-SILVER-002",
+      "plan": "Silver",
+      "vigente": true,
+      "fecha_inicio": "2024-03-01",
+      "fecha_fin": "2025-02-28"
+    },
+    {
+      "id": "P003",
+      "nombre": "José Ramírez",
+      "cedula": "1756789012",
+      "poliza_id": "POL-BASIC-003",
+      "plan": "Basic",
+      "vigente": true,
+      "fecha_inicio": "2024-06-01",
+      "fecha_fin": "2025-05-31"
+    }
+  ],
+  "planes": {
+    "Gold": {
+      "nombre": "Plan Gold",
+      "cobertura_porcentaje": 90,
+      "deducible_anual": 200,
+      "tope_anual": 50000,
+      "especialidades_cubiertas": [
+        "medicina_general", "cardiologia", "neurologia", "ortopedia",
+        "gastroenterologia", "dermatologia", "ginecologia", "pediatria",
+        "oftalmologia", "urologia", "endocrinologia", "psiquiatria"
+      ],
+      "copagos_por_especialidad": {
+        "medicina_general": 5,
+        "cardiologia": 15,
+        "neurologia": 20,
+        "ortopedia": 15,
+        "gastroenterologia": 15,
+        "dermatologia": 10,
+        "ginecologia": 10,
+        "pediatria": 5,
+        "oftalmologia": 10,
+        "urologia": 15,
+        "endocrinologia": 15,
+        "psiquiatria": 20
+      },
+      "hospitales_red": ["HCAM", "Hospital Metropolitano", "Hospital de los Valles", "Clínica Santa Cecilia", "Hospital Vozandes"]
+    },
+    "Silver": {
+      "nombre": "Plan Silver",
+      "cobertura_porcentaje": 75,
+      "deducible_anual": 400,
+      "tope_anual": 25000,
+      "especialidades_cubiertas": [
+        "medicina_general", "cardiologia", "ortopedia",
+        "gastroenterologia", "ginecologia", "pediatria", "oftalmologia"
+      ],
+      "copagos_por_especialidad": {
+        "medicina_general": 10,
+        "cardiologia": 25,
+        "ortopedia": 25,
+        "gastroenterologia": 25,
+        "ginecologia": 20,
+        "pediatria": 10,
+        "oftalmologia": 20
+      },
+      "hospitales_red": ["HCAM", "Hospital de los Valles", "Clínica Kennedy", "Hospital Eugenio Espejo"]
+    },
+    "Basic": {
+      "nombre": "Plan Basic",
+      "cobertura_porcentaje": 60,
+      "deducible_anual": 800,
+      "tope_anual": 10000,
+      "especialidades_cubiertas": [
+        "medicina_general", "pediatria", "ginecologia"
+      ],
+      "copagos_por_especialidad": {
+        "medicina_general": 15,
+        "pediatria": 15,
+        "ginecologia": 20
+      },
+      "hospitales_red": ["HCAM", "Hospital Eugenio Espejo", "Hospital Pablo Arturo Suárez"]
+    }
+  },
+  "hospitales": {
+    "HCAM": {
+      "nombre": "Hospital Carlos Andrade Marín (IESS)",
+      "ciudad": "Quito",
+      "direccion": "Av. Universitaria y Av. Colón",
+      "telefono": "02-394-8000",
+      "costo_consulta_base": 45,
+      "especialidades": ["medicina_general", "cardiologia", "neurologia", "ortopedia", "gastroenterologia", "ginecologia", "pediatria", "urologia"],
+      "lat": -0.2105,
+      "lng": -78.4978
+    },
+    "Hospital Metropolitano": {
+      "nombre": "Hospital Metropolitano",
+      "ciudad": "Quito",
+      "direccion": "Av. Mariana de Jesús s/n y Nicolás Arteta",
+      "telefono": "02-399-8000",
+      "costo_consulta_base": 80,
+      "especialidades": ["medicina_general", "cardiologia", "neurologia", "ortopedia", "gastroenterologia", "dermatologia", "ginecologia", "pediatria", "oftalmologia", "urologia", "endocrinologia"],
+      "lat": -0.1807,
+      "lng": -78.4875
+    },
+    "Hospital de los Valles": {
+      "nombre": "Hospital de los Valles",
+      "ciudad": "Quito",
+      "direccion": "Av. Interoceánica km 12.5",
+      "telefono": "02-299-6300",
+      "costo_consulta_base": 70,
+      "especialidades": ["medicina_general", "cardiologia", "ortopedia", "gastroenterologia", "ginecologia", "pediatria", "oftalmologia"],
+      "lat": -0.2833,
+      "lng": -78.4167
+    },
+    "Clínica Santa Cecilia": {
+      "nombre": "Clínica Santa Cecilia",
+      "ciudad": "Quito",
+      "direccion": "Av. 6 de Diciembre N24-634",
+      "telefono": "02-255-4300",
+      "costo_consulta_base": 55,
+      "especialidades": ["medicina_general", "ginecologia", "pediatria", "dermatologia", "oftalmologia"],
+      "lat": -0.2049,
+      "lng": -78.4836
+    },
+    "Hospital Vozandes": {
+      "nombre": "Hospital Vozandes",
+      "ciudad": "Quito",
+      "direccion": "Villalengua Oe2-37 y Av. 10 de Agosto",
+      "telefono": "02-226-2142",
+      "costo_consulta_base": 65,
+      "especialidades": ["medicina_general", "cardiologia", "neurologia", "ortopedia", "gastroenterologia", "ginecologia", "pediatria", "psiquiatria"],
+      "lat": -0.1746,
+      "lng": -78.4894
+    },
+    "Clínica Kennedy": {
+      "nombre": "Clínica Kennedy",
+      "ciudad": "Guayaquil",
+      "direccion": "Av. San Jorge y Av. del Periodista",
+      "telefono": "04-228-9666",
+      "costo_consulta_base": 60,
+      "especialidades": ["medicina_general", "cardiologia", "ortopedia", "gastroenterologia", "ginecologia", "pediatria", "oftalmologia"],
+      "lat": -2.1709,
+      "lng": -79.9224
+    },
+    "Hospital Eugenio Espejo": {
+      "nombre": "Hospital Eugenio Espejo",
+      "ciudad": "Quito",
+      "direccion": "Av. Gran Colombia s/n y Yaguachi",
+      "telefono": "02-252-2420",
+      "costo_consulta_base": 40,
+      "especialidades": ["medicina_general", "cardiologia", "neurologia", "ginecologia", "pediatria"],
+      "lat": -0.2167,
+      "lng": -78.5000
+    },
+    "Hospital Pablo Arturo Suárez": {
+      "nombre": "Hospital Pablo Arturo Suárez",
+      "ciudad": "Quito",
+      "direccion": "Av. De la Prensa N54-18 y Av. del Maestro",
+      "telefono": "02-248-0510",
+      "costo_consulta_base": 35,
+      "especialidades": ["medicina_general", "pediatria", "ginecologia"],
+      "lat": -0.1167,
+      "lng": -78.5167
+    }
+  }
+}
