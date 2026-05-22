@@ -9,7 +9,11 @@ import os
 
 load_dotenv()
 
-from .agent import chat_with_agent
+try:
+    from .agent import chat_with_agent
+except ImportError:
+    # Soporta correr desde backend/ con uvicorn main:app
+    from agent import chat_with_agent
 
 app = FastAPI(
     title="MediCopago - Estimador de Copago",

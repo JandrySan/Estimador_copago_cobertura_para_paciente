@@ -52,6 +52,10 @@ cp .env.example .env
 
 ### 4. Correr el servidor
 ```bash
+# Desde la carpeta raíz del proyecto
+uvicorn backend.main:app --reload --port 8000
+
+# O desde el directorio backend
 cd backend
 uvicorn main:app --reload --port 8000
 ```
@@ -105,7 +109,9 @@ POST /chat
 
 ## 👥 Equipo
 
-- Tu nombre aquí
+- José Gabriel Álava Barcia
+- Jandry Paúl Sánchez Murillo
+- Joel Alejandro Barrera Vaca
 
 ## 📄 Licencia
 
