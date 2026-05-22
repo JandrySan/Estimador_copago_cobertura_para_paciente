@@ -11,6 +11,7 @@ client = OpenAI(
     api_key=os.getenv("DEEPSEEK_API_KEY"),
     base_url="https://api.groq.com/openai/v1"
 )
+
 # Cargar datos mock
 DATA_PATH = Path(__file__).parent.parent / "data" / "mock_data.json"
 with open(DATA_PATH, "r", encoding="utf-8") as f:
