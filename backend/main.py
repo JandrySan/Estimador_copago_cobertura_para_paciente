@@ -35,6 +35,30 @@ if frontend_path.exists():
     app.mount("/static", StaticFiles(directory=str(frontend_path)), name="static")
 
 
+@app.get("/styles.css")
+async def styles_css():
+    css_path = frontend_path / "styles.css"
+    if css_path.exists():
+        return FileResponse(str(css_path), media_type="text/css")
+    raise HTTPException(status_code=404, detail="styles.css not found")
+
+
+@app.get("/app.js")
+async def app_js():
+    js_path = frontend_path / "app.js"
+    if js_path.exists():
+        return FileResponse(str(js_path), media_type="application/javascript")
+    raise HTTPException(status_code=404, detail="app.js not found")
+
+
+@app.get("/favicon.ico")
+async def favicon():
+    icon_path = frontend_path / "favicon.ico"
+    if icon_path.exists():
+        return FileResponse(str(icon_path), media_type="image/x-icon")
+    raise HTTPException(status_code=404, detail="favicon.ico not found")
+
+
 # ── Modelos ──────────────────────────────────────────────────────────────────
 
 class ChatRequest(BaseModel):
